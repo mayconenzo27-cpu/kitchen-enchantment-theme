@@ -1,0 +1,43 @@
+{%- if settings.announcement_text != blank -%}
+  <div class="announcement-bar color-{{ section.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}">
+    <div class="page-width">
+      <p class="announcement-bar__message h5">
+        {{ settings.announcement_text }}
+      </p>
+    </div>
+  </div>
+{%- endif -%}
+
+<style>
+  .announcement-bar {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 500;
+  }
+
+  .announcement-bar__message {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Barra de Anúncio",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de Cores",
+      "default": "background-1"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,34 @@
+{
+  "sections": {
+    "announcement_bar": {
+      "type": "announcement-bar"
+    },
+    "header": {
+      "type": "header"
+    },
+    "hero_banner": {
+      "type": "hero-banner"
+    },
+    "categories_grid": {
+      "type": "categories-grid"
+    },
+    "featured_products": {
+      "type": "featured-products"
+    },
+    "testimonials": {
+      "type": "testimonials"
+    },
+    "footer": {
+      "type": "footer"
+    }
+  },
+  "order": [
+    "announcement_bar",
+    "header", 
+    "hero_banner",
+    "categories_grid",
+    "featured_products",
+    "testimonials",
+    "footer"
+  ]
+}

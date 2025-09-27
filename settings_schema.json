@@ -1,0 +1,108 @@
+[
+  {
+    "name": "Configurações Gerais",
+    "settings": [
+      {
+        "type": "text",
+        "id": "theme_name", 
+        "label": "Nome do Tema",
+        "default": "Magia da Cozinha"
+      },
+      {
+        "type": "text",
+        "id": "store_description",
+        "label": "Descrição da Loja",
+        "default": "Transforme sua cozinha em um espaço mágico"
+      }
+    ]
+  },
+  {
+    "name": "Cores",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Cor Primária",
+        "default": "#ff6b35"
+      },
+      {
+        "type": "color", 
+        "id": "color_secondary",
+        "label": "Cor Secundária",
+        "default": "#f7941d"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Cor de Destaque", 
+        "default": "#fff3e0"
+      }
+    ]
+  },
+  {
+    "name": "Tipografia",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "font_heading",
+        "label": "Fonte dos Títulos",
+        "default": "assistant_n4"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_body",
+        "label": "Fonte do Corpo",
+        "default": "assistant_n4"
+      }
+    ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "text",
+        "id": "announcement_text",
+        "label": "Texto do Anúncio",
+        "default": "🔥 Frete grátis acima de R$ 149,99"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      }
+    ]
+  },
+  {
+    "name": "Hero Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "hero_image",
+        "label": "Imagem Principal"
+      },
+      {
+        "type": "text",
+        "id": "hero_title",
+        "label": "Título Principal",
+        "default": "Transforme sua cozinha em um espaço mágico"
+      },
+      {
+        "type": "textarea",
+        "id": "hero_description", 
+        "label": "Descrição",
+        "default": "Descubra nossa coleção exclusiva de utensílios, decoração e organização para criar momentos especiais na sua cozinha."
+      },
+      {
+        "type": "text",
+        "id": "hero_button_text",
+        "label": "Texto do Botão",
+        "default": "Ver Coleção"
+      },
+      {
+        "type": "url",
+        "id": "hero_button_url",
+        "label": "Link do Botão"
+      }
+    ]
+  }
+]

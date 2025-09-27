@@ -1,0 +1,156 @@
+<header class="header">
+  <div class="header__inner page-width">
+    <div class="header__heading">
+      {%- if settings.logo != blank -%}
+        <a href="{{ routes.root_url }}" class="header__heading-link">
+          <img
+            src="{{ settings.logo | image_url: width: 150 }}"
+            alt="{{ shop.name }}"
+            width="150"
+            height="{{ 150 | divided_by: settings.logo.aspect_ratio | ceil }}"
+            class="header__logo"
+          >
+        </a>
+      {%- else -%}
+        <a href="{{ routes.root_url }}" class="header__heading-link h2">
+          {{ shop.name }}
+        </a>
+      {%- endif -%}
+    </div>
+
+    <nav class="header__inline-menu">
+      <ul class="list-menu list-menu--inline" role="list">
+        <li><a href="{{ routes.root_url }}" class="header__menu-item">Início</a></li>
+        <li><a href="/collections/decoracao" class="header__menu-item">Decoração</a></li>
+        <li><a href="/collections/limpeza" class="header__menu-item">Limpeza</a></li>
+        <li><a href="/collections/organizacao" class="header__menu-item">Organização</a></li>
+        <li><a href="/collections/promocoes" class="header__menu-item">Promoções</a></li>
+        <li><a href="/pages/sobre-nos" class="header__menu-item">Sobre Nós</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__icons">
+      <a href="/search" class="header__icon header__icon--search">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="visually-hidden">Buscar</span>
+      </a>
+
+      <a href="/cart" class="header__icon header__icon--cart">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M5 7h14l-1 8H6L5 7Zm0 0L4 3H2m16 4v0a1 1 0 0 1-1 1M7 19a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="visually-hidden">Carrinho</span>
+        <span class="cart-count" id="cart-icon-bubble">{{ cart.item_count }}</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    background: white;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .header__heading-link {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: bold;
+  }
+
+  .header__logo {
+    max-height: 50px;
+    width: auto;
+  }
+
+  .header__inline-menu {
+    flex: 1;
+    margin: 0 2rem;
+  }
+
+  .list-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .header__menu-item {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .header__menu-item:hover {
+    color: var(--color-primary);
+  }
+
+  .header__icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .header__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #666;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .header__icon:hover {
+    background: #f8f9fa;
+    color: var(--color-primary);
+  }
+
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .header__inline-menu {
+      display: none;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": []
+}
+{% endschema %}

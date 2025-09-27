@@ -1,0 +1,22 @@
+{
+  "sections": {
+    "header": {
+      "type": "header"
+    },
+    "collection_banner": {
+      "type": "collection-banner"
+    },
+    "collection_products": {
+      "type": "collection-products"
+    },
+    "footer": {
+      "type": "footer"
+    }
+  },
+  "order": [
+    "header",
+    "collection_banner",
+    "collection_products", 
+    "footer"
+  ]
+}
