@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          muted: "hsl(var(--primary-muted))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -46,6 +47,12 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        kitchen: {
+          warm: "hsl(var(--kitchen-warm))",
+          soft: "hsl(var(--kitchen-soft))",
+          neutral: "hsl(var(--kitchen-neutral))",
+          text: "hsl(var(--kitchen-text))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
